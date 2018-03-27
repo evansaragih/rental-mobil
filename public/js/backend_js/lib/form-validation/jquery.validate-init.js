@@ -55,9 +55,11 @@ var form_validation = function() {
                         required: !0,
                         url: !0
                     },
-                    "val-phoneus": {
+                    "val-phone": {
                         required: !0,
-                        phoneUS: !0
+                        number:["0-9-+",!0],
+                        minlength: 11,
+                        maxlength: 13
                     },
                     "val-digits": {
                         required: !0,
@@ -100,7 +102,12 @@ var form_validation = function() {
                     "val-skill": "Please select a skill!",
                     "val-currency": "Please enter a price!",
                     "val-website": "Please enter your website!",
-                    "val-phoneus": "Please enter a US phone!",
+                    "val-phone": {
+                        required: "Anda belum mengisi kolom ini",
+                        number: "Nomor telepon tidak valid",
+                        minlength: "Nomor telepon terlalu pendek",
+                        maxlength: "Nomor telepon terlalu panjang"
+                    },
                     "val-digits": "Please enter only digits!",
                     "val-number": "Please enter a number!",
                     "val-range": "Please enter a number between 1 and 5!",
